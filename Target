@@ -1,0 +1,38 @@
+//Tarefa 2 em C
+
+#include <stdio.h>
+
+int fibonacci(int x)
+{
+   int n, fib, a=0, b=1, cont;
+
+
+   scanf("%d", &n);
+   printf("0\n");
+   printf("1\n");
+  
+   for(int i = 0; i < n-2 ; i++){
+       fib = a + b;
+       a = b;
+       b = fib;
+       printf("%d\n", fib);
+       if (fib == n){
+        cont = n;
+       }   
+   }
+   if (cont == 0){
+     printf("%d nao pertence a sequencia\n", n);
+
+   }else{
+         printf("%d pertence a sequencia\n", cont);
+   }
+   return 0;
+}
+
+
+int main(){
+   int n;
+
+   fibonacci(n);
+return 0;
+}
